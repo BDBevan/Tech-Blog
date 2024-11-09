@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {{#if session.userId}}
+                    <li><a href="/posts">Dashboard</a></li>
+                    <li>
+                        <form action="/auth/login" method="POST" style="display: inline;">
+                            <button type="submit" style="background: none; border: none; padding: 0; font: inherit; cursor: pointer; color: rgb(246, 246, 248);">Logout</button>
+                        </form>
+                    </li>
+                {{else}}
+                    <li><a href="/auth/login">Login</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+
+    {{{body}}}
+</body>
+</html>

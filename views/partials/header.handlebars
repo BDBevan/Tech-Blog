@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if session.userId}}
+                <li><a href="/posts">Dashboard</a></li>
+                <li><form action="/auth/logout" method="POST"><button type="submit">Logout</button></form></li>
+            {{else}}
+                <li><a href="/auth/signup">Sign Up</a></li>
+                <li><a href="/auth/login">Login</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

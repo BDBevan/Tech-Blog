@@ -1,0 +1,17 @@
+<h1>Welcome to My Tech Blog</h1>
+
+
+{{#if posts.length}}
+    <h2>Recent Posts:</h2>
+    <ul>
+        {{#each posts}}
+            <li>
+                <a href="/posts/{{this.id}}">{{this.title}}</a>
+                <p>Posted on: {{this.createdAt}}</p>
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No blog posts available yet. <a href="/posts/new">Create your first post!</a></p>
+{{/if}}
+
