@@ -8,11 +8,11 @@ const methodOverride = require('method-override');
 const routes = require('./routes');
 const { sequelize } = require('./models');
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3001;
 
 // Log the PORT and DATABASE_URL for troubleshooting
 console.log(`Running on PORT: ${PORT}`);
-console.log(`Database URL: ${process.env.DB_URL}`);
+console.log(`Database URL: ${process.env.DATABASE_URL}`);
 
 // Handlebars setup
 const hbs = exphbs.create({});
