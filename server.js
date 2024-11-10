@@ -9,7 +9,7 @@ const methodOverride = require('method-override');
 const routes = require('./routes'); // Import your routes
 const { sequelize } = require('./models'); // Import the sequelize instance from your models
 const app = express();
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 5432;
 
 // Handlebars setup
 const hbs = exphbs.create({ /* config options */ });
