@@ -20,3 +20,5 @@ This is a online tech blog forum. It features the ability to view users posts, a
 
 ## links 
 Github : https://github.com/BDBevan/MVC-Tech-Blog
+Render : https://tech-blog-w9j7.onrender.com
+
